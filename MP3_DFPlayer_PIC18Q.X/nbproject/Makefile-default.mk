@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=DFPlayer.c INT.c main.c UART.c Configuracion.c
+SOURCEFILES_QUOTED_IF_SPACED=DFPlayer.c INT.c main.c UART.c Configuracion.c SSD1306.c Text_Font.c I2C.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/DFPlayer.p1 ${OBJECTDIR}/INT.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/UART.p1 ${OBJECTDIR}/Configuracion.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/DFPlayer.p1.d ${OBJECTDIR}/INT.p1.d ${OBJECTDIR}/main.p1.d ${OBJECTDIR}/UART.p1.d ${OBJECTDIR}/Configuracion.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/DFPlayer.p1 ${OBJECTDIR}/INT.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/UART.p1 ${OBJECTDIR}/Configuracion.p1 ${OBJECTDIR}/SSD1306.p1 ${OBJECTDIR}/Text_Font.p1 ${OBJECTDIR}/I2C.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/DFPlayer.p1.d ${OBJECTDIR}/INT.p1.d ${OBJECTDIR}/main.p1.d ${OBJECTDIR}/UART.p1.d ${OBJECTDIR}/Configuracion.p1.d ${OBJECTDIR}/SSD1306.p1.d ${OBJECTDIR}/Text_Font.p1.d ${OBJECTDIR}/I2C.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/DFPlayer.p1 ${OBJECTDIR}/INT.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/UART.p1 ${OBJECTDIR}/Configuracion.p1
+OBJECTFILES=${OBJECTDIR}/DFPlayer.p1 ${OBJECTDIR}/INT.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/UART.p1 ${OBJECTDIR}/Configuracion.p1 ${OBJECTDIR}/SSD1306.p1 ${OBJECTDIR}/Text_Font.p1 ${OBJECTDIR}/I2C.p1
 
 # Source Files
-SOURCEFILES=DFPlayer.c INT.c main.c UART.c Configuracion.c
+SOURCEFILES=DFPlayer.c INT.c main.c UART.c Configuracion.c SSD1306.c Text_Font.c I2C.c
 
 
 
@@ -128,6 +128,30 @@ ${OBJECTDIR}/Configuracion.p1: Configuracion.c  nbproject/Makefile-${CND_CONF}.m
 	@-${MV} ${OBJECTDIR}/Configuracion.d ${OBJECTDIR}/Configuracion.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/Configuracion.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
+${OBJECTDIR}/SSD1306.p1: SSD1306.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/SSD1306.p1.d 
+	@${RM} ${OBJECTDIR}/SSD1306.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/SSD1306.p1 SSD1306.c 
+	@-${MV} ${OBJECTDIR}/SSD1306.d ${OBJECTDIR}/SSD1306.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/SSD1306.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/Text_Font.p1: Text_Font.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Text_Font.p1.d 
+	@${RM} ${OBJECTDIR}/Text_Font.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/Text_Font.p1 Text_Font.c 
+	@-${MV} ${OBJECTDIR}/Text_Font.d ${OBJECTDIR}/Text_Font.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/Text_Font.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/I2C.p1: I2C.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/I2C.p1.d 
+	@${RM} ${OBJECTDIR}/I2C.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/I2C.p1 I2C.c 
+	@-${MV} ${OBJECTDIR}/I2C.d ${OBJECTDIR}/I2C.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/I2C.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
 else
 ${OBJECTDIR}/DFPlayer.p1: DFPlayer.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
@@ -168,6 +192,30 @@ ${OBJECTDIR}/Configuracion.p1: Configuracion.c  nbproject/Makefile-${CND_CONF}.m
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/Configuracion.p1 Configuracion.c 
 	@-${MV} ${OBJECTDIR}/Configuracion.d ${OBJECTDIR}/Configuracion.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/Configuracion.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/SSD1306.p1: SSD1306.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/SSD1306.p1.d 
+	@${RM} ${OBJECTDIR}/SSD1306.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/SSD1306.p1 SSD1306.c 
+	@-${MV} ${OBJECTDIR}/SSD1306.d ${OBJECTDIR}/SSD1306.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/SSD1306.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/Text_Font.p1: Text_Font.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Text_Font.p1.d 
+	@${RM} ${OBJECTDIR}/Text_Font.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/Text_Font.p1 Text_Font.c 
+	@-${MV} ${OBJECTDIR}/Text_Font.d ${OBJECTDIR}/Text_Font.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/Text_Font.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/I2C.p1: I2C.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/I2C.p1.d 
+	@${RM} ${OBJECTDIR}/I2C.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/I2C.p1 I2C.c 
+	@-${MV} ${OBJECTDIR}/I2C.d ${OBJECTDIR}/I2C.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/I2C.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 

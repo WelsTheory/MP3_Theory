@@ -11,6 +11,11 @@ volatile int8_t volumen = 0;
 volatile uint8_t flag_volumen = 0;
 volatile uint8_t flag_DFP = 0;
 
+volatile uint8_t BT_Song[11] = {0};
+volatile uint8_t id_song = 0;
+volatile uint8_t flag_song = 0;
+volatile uint8_t while_song = 0;
+
 void INT_Init(void){
      // INT0 
     TRISBbits.TRISB0 = 1; // ENTRADA
@@ -90,22 +95,44 @@ void __interrupt(irq(IRQ_U1RX), base(0x200), high_priority) Interrupcion_isr(voi
 {
     if(PIR4bits.U1RXIF == 1)
     {
-        if((UART_Rx() >= '0') && (UART_Rx() <= '9'))
+        if(while_song)
         {
-            BT_RX[0] = 'V';
-            BT_VOL[id_vol] = UART_Rx();//10 09 25
-            id_vol++;
-            if(id_vol == 2)
+            BT_Song[id_song] = UART_Rx();
+            id_song++;
+            if(id_song == 10)
             {
-                id_vol = 0;
-                flag_DFP = 1;
+                BT_Song[id_song] = '\0';
+                id_song = 0;
+                flag_song = 1;
+                while_song = 0;
             }
         }
         else
         {
-            BT_RX[0] = UART_Rx();
-            flag_DFP = 1;
+             if((UART_Rx() >= '0') && (UART_Rx() <= '9'))
+            {
+                BT_RX[0] = 'V';
+                BT_VOL[id_vol] = UART_Rx();//10 09 25
+                id_vol++;
+                if(id_vol == 2)
+                {
+                    id_vol = 0;
+                    flag_DFP = 1;
+                }
+            }
+            else if((UART_Rx() == 'R'))
+            {
+                BT_Song[id_song] = UART_Rx();
+                id_song++;
+                while_song = 1;
+            }
+            else
+            {
+                BT_RX[0] = UART_Rx();
+                flag_DFP = 1;
+            }
         }
+       
         
         PIR4bits.U1RXIF = 0;
     }

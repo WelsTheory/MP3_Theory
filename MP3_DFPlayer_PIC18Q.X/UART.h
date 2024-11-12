@@ -19,7 +19,7 @@ void putch(char txData);
 
 char UART_Rx(void);
 
-char getch(void);
+int getch(void);
 
 
 #define START_Streaming 0x03

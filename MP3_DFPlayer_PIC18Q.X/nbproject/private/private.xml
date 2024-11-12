@@ -3,13 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Electronica/CURSOS/PIC18F57Q43/PCBs/MP3/MP3_DFPlayer_PIC18Q.X/Configuracion.h</file>
+            <file>file:/D:/Electronica/CURSOS/PIC18F57Q43/PCBs/MP3/MP3_DFPlayer_PIC18Q.X/UART.h</file>
+            <file>file:/D:/Electronica/CURSOS/PIC18F57Q43/PCBs/MP3/MP3_DFPlayer_PIC18Q.X/I2C.c</file>
+            <file>file:/D:/Electronica/CURSOS/PIC18F57Q43/PCBs/MP3/MP3_DFPlayer_PIC18Q.X/Cancion_Index.h</file>
             <file>file:/D:/Electronica/CURSOS/PIC18F57Q43/PCBs/MP3/MP3_DFPlayer_PIC18Q.X/main.c</file>
             <file>file:/D:/Electronica/CURSOS/PIC18F57Q43/PCBs/MP3/MP3_DFPlayer_PIC18Q.X/DFPlayer.h</file>
-            <file>file:/D:/Electronica/CURSOS/PIC18F57Q43/PCBs/MP3/MP3_DFPlayer_PIC18Q.X/UART.c</file>
             <file>file:/D:/Electronica/CURSOS/PIC18F57Q43/PCBs/MP3/MP3_DFPlayer_PIC18Q.X/INT.c</file>
+            <file>file:/D:/Electronica/CURSOS/PIC18F57Q43/PCBs/MP3/MP3_DFPlayer_PIC18Q.X/main.h</file>
             <file>file:/D:/Electronica/CURSOS/PIC18F57Q43/PCBs/MP3/MP3_DFPlayer_PIC18Q.X/DFPlayer.c</file>
-            <file>file:/D:/Electronica/CURSOS/PIC18F57Q43/PCBs/MP3/MP3_DFPlayer_PIC18Q.X/Configuracion.c</file>
+            <file>file:/D:/Electronica/CURSOS/PIC18F57Q43/PCBs/MP3/MP3_DFPlayer_PIC18Q.X/SSD1306.c</file>
+            <file>file:/D:/Electronica/CURSOS/PIC18F57Q43/PCBs/MP3/MP3_DFPlayer_PIC18Q.X/Text_Font.c</file>
         </group>
     </open-files>
 </project-private>

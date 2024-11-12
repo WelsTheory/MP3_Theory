@@ -93,7 +93,7 @@ char UART_Rx(void){
     return U1RXB; // 8 bits 
 }
 
-char getch(void)
+int getch(void)
 {
     return UART_Rx();
 }

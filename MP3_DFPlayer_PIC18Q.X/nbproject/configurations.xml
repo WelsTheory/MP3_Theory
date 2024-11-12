@@ -9,6 +9,11 @@
       <itemPath>INT.h</itemPath>
       <itemPath>UART.h</itemPath>
       <itemPath>Configuracion_1.h</itemPath>
+      <itemPath>SSD1306.h</itemPath>
+      <itemPath>Text_Font.h</itemPath>
+      <itemPath>I2C.h</itemPath>
+      <itemPath>main.h</itemPath>
+      <itemPath>Cancion_Index.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -22,6 +27,9 @@
       <itemPath>main.c</itemPath>
       <itemPath>UART.c</itemPath>
       <itemPath>Configuracion.c</itemPath>
+      <itemPath>SSD1306.c</itemPath>
+      <itemPath>Text_Font.c</itemPath>
+      <itemPath>I2C.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
